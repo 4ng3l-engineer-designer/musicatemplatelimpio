@@ -3122,3 +3122,74 @@ footer .newsletter form button:hover {
 }
 
 /*# sourceMappingURL=app.css.map */
+/* Contenedor principal para asegurar que las filas estén alineadas */
+.show-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Forzar el tamaño de la tarjeta y la imagen */
+.show-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 16px; /* Para que se vea redondeado como tu ejemplo */
+}
+
+.show-image {
+    width: 100%;
+    /* Definimos una relación de aspecto cuadrada (1/1) 
+       o rectangular (4/5) para que todas sean iguales */
+    aspect-ratio: 1 / 1; 
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.1); /* Fondo por si la imagen falla */
+}
+
+.show-image img {
+    width: 100%;
+    height: 100%;
+    /* ESTA ES LA CLAVE: ajusta la imagen al cuadro sin deformarla */
+    object-fit: cover; 
+    object-position: center;
+    display: block;
+}
+
+/* Ajuste de los títulos para que estén siempre arriba */
+.show-title {
+    padding: 10px;
+    order: -1; /* Mantiene el nombre arriba de la imagen */
+}
+/* 1. Ajuste de la tarjeta para que el contenido suba */
+.show-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinea todo al inicio (arriba) */
+    height: 100%;
+    padding: 10px; /* Reduce el espacio general de la tarjeta */
+}
+
+/* 2. Reducir el espacio del título */
+.show-title {
+    padding: 1px 0 5px 0; /* Menos espacio arriba y abajo del nombre */
+    margin: 0;
+    font-size: 1.1rem; /* Ajusta según necesites */
+    order: -1; /* Mantiene el nombre arriba de la imagen */
+}
+
+/* 3. Ajuste del contenedor de la imagen */
+.show-image {
+    width: 100%;
+    margin-top: 0; /* Elimina cualquier margen superior que esté alejando la foto */
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.show-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cambia a 'contain' si prefieres la imagen completa, pero 'cover' llena mejor el espacio */
+    display: block;
+}
