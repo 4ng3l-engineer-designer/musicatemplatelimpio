@@ -254,10 +254,10 @@
         eventCounter.countdown(countdownTime, function (e) {
           $(this).html(
             e.strftime(
-              '<li><div><h2>%D</h2><h6>Days</h6></div></li>\
+              '<li><div><h2>%D</h2><h6>Días</h6></div></li>\
               <li><div><h2>%H</h2><h6>Hrs</h6></div></li>\
               <li><div><h2>%M</h2><h6>Min</h6></div></li>\
-              <li><div><h2>%S</h2><h6>Sec</h6></div></li>'
+              <li><div><h2>%S</h2><h6>Seg</h6></div></li>'
             )
           );
         });
