@@ -2238,9 +2238,13 @@ Elements
   .show-like-section .show-wrapper .show-card .show-image img {
     width: 100%;
   }
+  
 }
 .show-like-section .show-wrapper .show-card.card-2 {
-  background: #49367A;
+  background: #344f6a;
+}
+.show-like-section .show-wrapper .show-card.card-121 {
+  background: #7a1ce0;
 }
 .show-like-section .show-wrapper .show-card.card-3 {
   background: #F0B21E;
@@ -3122,124 +3126,39 @@ footer .newsletter form button:hover {
 }
 
 /*# sourceMappingURL=app.css.map */
-/* Contenedor principal para asegurar que las filas estén alineadas */
-.show-wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
+
+
+/* ===== TikTok slider ===== */
+
+/* ===== TikTok responsive completo ===== */
+
+.page-tiktok .tiktok-container{
+  width: 340px;
+  max-width: 100%;
+  aspect-ratio: 9 / 16;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #000;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
 }
 
-/* Forzar el tamaño de la tarjeta y la imagen */
-.show-card {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    overflow: hidden;
-    border-radius: 16px; /* Para que se vea redondeado como tu ejemplo */
+.page-tiktok .tiktok-iframe{
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+  pointer-events: auto;
 }
 
-.show-image {
-    width: 100%;
-    /* Definimos una relación de aspecto cuadrada (1/1) 
-       o rectangular (4/5) para que todas sean iguales */
-    aspect-ratio: 1 / 1; 
-    overflow: hidden;
-    background-color: rgba(0,0,0,0.1); /* Fondo por si la imagen falla */
-}
-
-.show-image img {
-    width: 100%;
-    height: 100%;
-    /* ESTA ES LA CLAVE: ajusta la imagen al cuadro sin deformarla */
-    object-fit: cover; 
-    object-position: center;
-    display: block;
-}
-
-/* Ajuste de los títulos para que estén siempre arriba */
-.show-title {
-    padding: 10px;
-    order: -1; /* Mantiene el nombre arriba de la imagen */
-}
-/* 1. Ajuste de la tarjeta para que el contenido suba */
-.show-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Alinea todo al inicio (arriba) */
-    height: 100%;
-    padding: 10px; /* Reduce el espacio general de la tarjeta */
-}
-
-/* 2. Reducir el espacio del título */
-.show-title {
-    padding: 1px 0 5px 0; /* Menos espacio arriba y abajo del nombre */
-    margin: 0;
-    font-size: 1.1rem; /* Ajusta según necesites */
-    order: -1; /* Mantiene el nombre arriba de la imagen */
-}
-
-/* 3. Ajuste del contenedor de la imagen */
-.show-image {
-    width: 100%;
-    margin-top: 0; /* Elimina cualquier margen superior que esté alejando la foto */
-    aspect-ratio: 1 / 1;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.show-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Cambia a 'contain' si prefieres la imagen completa, pero 'cover' llena mejor el espacio */
-    display: block;
-}
-/* 1. Ajuste del contenedor principal para que las tarjetas fluyan bien */
-.popular-wrapper {
-    display: grid;
-    /* Crea columnas automáticas de mínimo 200px */
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
-    gap: 24px;
-    align-items: stretch;
-}
-
-/* 2. La tarjeta de la canción/DJ */
-.popular-song-container {
-    background: #1a1a1a; /* Un color de fondo para que todas se vean uniformes */
-    padding: 16px;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    height: 100%; /* Obliga a todas las tarjetas a medir lo mismo */
-}
-
-/* 3. EL TRUCO PARA LAS IMÁGENES: Aquí arreglamos el descuadre */
-.image-box {
-    width: 100%;
-    aspect-ratio: 1 / 1; /* Esto garantiza que el contenedor sea SIEMPRE cuadrado */
-    overflow: hidden;
-    border-radius: 8px;
-    position: relative;
-}
-
-.image-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ajusta la imagen sin estirarla, recortando lo sobrante */
-    object-position: center; /* Centra el enfoque de la foto */
-    display: block;
-}
-
-/* 4. Ajuste de los textos para que no rompan la caja */
-.content-box {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: auto; /* Empuja el contenido hacia abajo si hay espacio */
-}
-
-.content-box p {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis; /* Si el nombre es muy largo, pone "..." */
-    max-width: 120px;
+.popular-video-vertical{
+  width: 100%;
+  max-width: 260px;
+  aspect-ratio: 9 / 16;
+  display: block;
+  margin: 0 auto;
+  border-radius: 16px;
+  background: #000;
+  object-fit: contain; /* muestra completo */
 }
