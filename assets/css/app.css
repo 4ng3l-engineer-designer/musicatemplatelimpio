@@ -3161,16 +3161,4 @@ footer .newsletter form button:hover {
   border-radius: 16px;
   background: #000;
   object-fit: contain; /* muestra completo */
-}
-
-/* FUERZA TODAS LAS IMÁGENES DE TARJETAS A SER CUADRADAS */
-.favorites-track img, 
-.track-item img, 
-.album-card img, 
-.artist-card img,
-.thumb img {
-    width: 100% !important;
-    aspect-ratio: 1 / 1 !important; /* Esto las hace cuadradas automáticamente */
-    object-fit: cover !important;  /* Centra y recorta el sobrante para no deformar */
-    display: block;
-}
+} 
