@@ -3162,3 +3162,53 @@ footer .newsletter form button:hover {
   background: #000;
   object-fit: contain; /* muestra completo */
 }
+
+.chatbot-wrapper{
+    position: fixed;
+    right: 25px;   /* mismo eje que la flecha */
+    bottom: 150px; /* arriba de la flecha */
+    z-index: 9999;
+}
+
+/* BOTON */
+.chatbot-link img{
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
+}
+
+.chatbot-link img:hover{
+    transform: scale(1.1);
+}
+
+/* VIÑETA */
+.chatbot-bubble{
+    position: absolute;
+    right: 75px; /* aparece a la izquierda del botón */
+    top: 15px;
+    background: white;
+    color: #222;
+    padding: 10px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    white-space: nowrap;
+}
+
+/* TRIANGULO DE LA VIÑETA */
+.chatbot-bubble::after{
+    content: "";
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent transparent white;
+}
+
+
+
